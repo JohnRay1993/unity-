@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scrypts/EnemyGenerator.cs">
+    <Files>
+      <File FileName="Assets/_Scrypts/PathMovement.cs" Line="32" Column="3" />
+      <File FileName="Assets/_Scrypts/Path.cs" Line="23" Column="7" />
+      <File FileName="Assets/_Scrypts/EnemyGenerator.cs" Line="95" Column="4" />
+      <File FileName="Assets/_Scrypts/BaseHealth.cs" Line="37" Column="20" />
+      <File FileName="Assets/_Scrypts/EnemyDamage.cs" Line="7" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

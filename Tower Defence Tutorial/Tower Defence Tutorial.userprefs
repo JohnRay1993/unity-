@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tower.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Tower.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TowerBuilder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BaseHealth.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/johnray/Desktop/unity КУРСЫ/Tower Defence Tutorial/Assets/Scripts/Tower.cs" line="92" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
