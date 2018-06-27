@@ -1,17 +1,31 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class Selector : MonoBehaviour {
+namespace RTS
+{
+	public class Selector : MonoBehaviour {
 
-	private void Update()
-	{
-		if (Input.GetMouseButton (0)) {
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-			RaycastHit hit;
+		public delegate void MyDelegate(ObjectInfo info);
 
-			if (Physics.Raycast (ray, out hit)) {
-				Debug.Log (hit);
+		[SerializeField] private Text nameText;
+
+		public event MyDelegate ObjectSelected;
+
+		private void Update()
+		{
+			if (Input.GetMouseButton (0)) {
+				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				RaycastHit hit;
+
+				if (Physics.Raycast (ray, out hit)) {
+					ObjectInfo info = hit.collider.GetComponent<ObjectInfo> ();
+
+
+					if (info != null && ObjectSelected != null)
+						ObjectSelected.Invoke (info);
+				}
 			}
 		}
 	}
-
 }

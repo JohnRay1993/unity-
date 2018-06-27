@@ -51,8 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scrypts\Abilities.cs" />
      <Compile Include="Assets\_Scrypts\GameCamera.cs" />
+     <Compile Include="Assets\_Scrypts\Info.cs" />
+     <Compile Include="Assets\_Scrypts\ObjectInfo.cs" />
      <Compile Include="Assets\_Scrypts\Selector.cs" />
+     <Compile Include="Assets\_Scrypts\Spawner.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

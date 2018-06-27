@@ -11,13 +11,13 @@ namespace RTS
 		[SerializeField] private Transform yRig;
 
 		private Vector3 movement;
-		private Vector2 rotation;
+		private float rotation;
 		private float scroll = 0.0f;
 
 		private void Update()
 		{
 			movement = Vector3.zero;
-			rotation = Vector2.zero;
+			rotation = 0.0f;
 			scroll = 0.0f;
 
 			CheckKeyboard ();
@@ -38,7 +38,7 @@ namespace RTS
 		{
 			if (Input.GetKey (KeyCode.LeftAlt)) {
 				//mouse rotate
-				rotation = new Vector2 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"));
+				rotation = Input.GetAxis ("Mouse X");//new Vector2 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"));
 				return;
 			}
 
@@ -61,13 +61,24 @@ namespace RTS
 
 		private void Rotate()
 		{
-			xRig.rotation *= Quaternion.Euler (-rotation.y * rotationSpeed * Time.deltaTime, 0.0f, 0.0f);
-			yRig.rotation *= Quaternion.Euler (0.0f, rotation.x * rotationSpeed * Time.deltaTime, 0.0f);
+			//Rig.rotation *= Quaternion.Euler (-rotation.y * rotationSpeed * Time.deltaTime, 0.0f, 0.0f);
+			if (yRig.rotation.y < 90 && yRig.rotation.y > -90)
+				yRig.rotation *= Quaternion.Euler (0.0f, rotation * rotationSpeed * Time.deltaTime, 0.0f);
 		}
 
 		private void Zoom()
 		{
-			yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
+			if (xRig.position.y > 5 && xRig.position.y < 20)
+				yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
+			else
+			{
+				if (xRig.position.y <= 5 && scroll < 0)
+					yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
+				if (xRig.position.y >= 20 && scroll > 0)
+					yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
+			}
+
+
 		}
 
 	}
