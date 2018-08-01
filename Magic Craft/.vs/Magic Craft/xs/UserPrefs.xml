@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{BC787270-D3D5-D82A-2F57-DBA35A07A1C7}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/Book.cs">
+    <Files>
+      <File FileName="Assets/Scripts/UI/Book.cs" Line="10" Column="64" />
+      <File FileName="Assets/Scripts/UI/ResourceContainer.cs" Line="32" Column="30" />
+      <File FileName="Assets/Scripts/ResourceManager.cs" Line="8" Column="90" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{D20D99A8-7427-F0F7-7C33-716039AD8879}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/drag.cs">
+    <Files>
+      <File FileName="Assets/Scripts/drag.cs" Line="30" Column="29" />
+      <File FileName="../magic craft/Assets/Scrypts/Craft System/Cell.cs" Line="1" Column="1" />
+      <File FileName="../magic craft/Assets/Scrypts/Drag.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

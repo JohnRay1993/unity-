@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace RTS
 {
-
 	public enum ObjectType
 	{
 		Building, Unit
@@ -15,13 +14,15 @@ namespace RTS
 		Spawn, Build
 	}
 
+	[SerializeField]
 	public struct Ability
 	{
 		public AbilityType Type;
 		public GameObject Argument;
 	}
 
-	public class ObjectInfo : MonoBehaviour {
+	public class ObjectInfo : MonoBehaviour
+	{
 
 			public string Name;
 			public int MaxHealth;

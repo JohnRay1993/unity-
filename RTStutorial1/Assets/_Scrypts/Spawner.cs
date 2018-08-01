@@ -5,14 +5,15 @@ using RTS.UI;
 
 namespace RTS
 {
-public class Spawner : MonoBehaviour {
+	public class Spawner : MonoBehaviour
+	{
+		[SerializeField] private Transform spawnPoint;
+		[SerializeField] private Abilities abilities;
 
-	[SerializeField] private Transform spawnPoint;
-	[SerializeField] private Abilities abilities;
-
-		public void SpawnUnit(GameObject go)
+		public void SpawnUnit(GameObject unit)
 		{
-			//todo
+			GameObject instance = Instantiate(unit);
+			instance.transform.position = spawnPoint.position;
 		}
-}
+	}
 }

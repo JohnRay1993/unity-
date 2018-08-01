@@ -7,11 +7,13 @@ namespace RTS
 		[Header("Settings"), SerializeField] private float speed = 5f;
 		[SerializeField] private float rotationSpeed = 120f;
 		[SerializeField] private float scrollSpeed = 100f;
+		[SerializeField] private float xRigMin = 0f, xRigMax = 0.6f, yRigMin = 0f, yRigMax = 0.8f, xRigScrollMin = 5f, xRigScrollMax = 20;
 		[Header("References"), SerializeField] private Transform xRig;
 		[SerializeField] private Transform yRig;
 
 		private Vector3 movement;
 		private float rotation;
+		private float rotationX;
 		private float scroll = 0.0f;
 
 		private void Update()
@@ -39,6 +41,7 @@ namespace RTS
 			if (Input.GetKey (KeyCode.LeftAlt)) {
 				//mouse rotate
 				rotation = Input.GetAxis ("Mouse X");//new Vector2 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"));
+				rotationX = Input.GetAxis("Mouse Y");
 				return;
 			}
 
@@ -61,20 +64,22 @@ namespace RTS
 
 		private void Rotate()
 		{
-			//Rig.rotation *= Quaternion.Euler (-rotation.y * rotationSpeed * Time.deltaTime, 0.0f, 0.0f);
-			if (yRig.rotation.y < 90 && yRig.rotation.y > -90)
+			if ((xRig.rotation.x > xRigMin && xRig.rotation.x < xRigMax) || (rotationX < 0 && xRig.rotation.x < xRigMax) || (xRig.rotation.x > xRigMin && rotationX > 0))
+				xRig.rotation *= Quaternion.Euler (-rotationX * rotationSpeed * Time.deltaTime, 0.0f, 0.0f);
+
+			if ((yRig.rotation.y > yRigMin && yRig.rotation.y < yRigMax) || (rotation > 0 && yRig.rotation.y < yRigMax) || (yRig.rotation.y > yRigMin && rotation < 0))
 				yRig.rotation *= Quaternion.Euler (0.0f, rotation * rotationSpeed * Time.deltaTime, 0.0f);
 		}
 
 		private void Zoom()
 		{
-			if (xRig.position.y > 5 && xRig.position.y < 20)
+			if (xRig.position.y > xRigScrollMin && xRig.position.y < xRigScrollMax)
 				yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
 			else
 			{
-				if (xRig.position.y <= 5 && scroll < 0)
+				if (xRig.position.y <= xRigScrollMin && scroll < 0)
 					yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
-				if (xRig.position.y >= 20 && scroll > 0)
+				if (xRig.position.y >= xRigScrollMax && scroll > 0)
 					yRig.position += xRig.forward * scroll * scrollSpeed * Time.deltaTime;
 			}
 

@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scrypts/GameCamera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scrypts/UI/Abilities.cs">
     <Files>
-      <File FileName="Assets/_Scrypts/GameCamera.cs" Line="65" Column="49" />
-      <File FileName="Assets/_Scrypts/Selector.cs" Line="23" Column="6" />
-      <File FileName="Assets/_Scrypts/ObjectInfo.cs" Line="34" Column="21" />
-      <File FileName="Assets/_Scrypts/Info.cs" Line="35" Column="3" />
-      <File FileName="Assets/_Scrypts/Abilities.cs" Line="32" Column="30" />
-      <File FileName="Assets/_Scrypts/Spawner.cs" Line="15" Column="10" />
+      <File FileName="Assets/_Scrypts/UI/Abilities.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scrypts/GameCamera.cs" Line="82" Column="41" />
+      <File FileName="Assets/_Scrypts/Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scrypts/Selector.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scrypts/ObjectInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scrypts/UI/HealthBar.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scrypts/UI/Info.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

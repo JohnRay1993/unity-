@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{DD08720B-9DA4-50BE-219F-60491422CA8A}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Hit.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GenerateBlocks.cs" Line="22" Column="54" />
+      <File FileName="Assets/Scripts/Hit.cs" Line="10" Column="46" />
+      <File FileName="Assets/Scripts/myUI.cs" Line="14" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

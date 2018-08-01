@@ -586,6 +586,12 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 120
   scrollSpeed: 100
+  xRigMin: 0
+  xRigMax: 0.6
+  yRigMin: 0
+  yRigMax: 0.8
+  xRigScrollMin: 5
+  xRigScrollMax: 20
   xRig: {fileID: 1837202180}
   yRig: {fileID: 337376011}
 --- !u!1 &470285286
@@ -639,7 +645,6 @@ MonoBehaviour:
   nameText: {fileID: 597319546}
   healthBar: {fileID: 1885022280}
   selector: {fileID: 1893035388}
-  healthText: {fileID: 1701198818}
 --- !u!1 &508312635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,8 +1704,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selector: {fileID: 1893035388}
-  abilities:
-  - {fileID: 1180073965}
+  buttons:
+  - {fileID: 816667572}
+  - {fileID: 1007324538}
+  - {fileID: 508312637}
+  - {fileID: 903965684}
+  - {fileID: 53451058}
+  - {fileID: 1307401050}
 --- !u!114 &1180073966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,8 +1722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d453980c947d4202aa0071eae6beaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  abilities: {fileID: 0}
+  spawnPoint: {fileID: 186833414}
+  abilities: {fileID: 1993446001}
 --- !u!1 &1269385886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,13 +2473,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837202176}
-  m_LocalRotation: {x: 0.44299296, y: 0, z: 0, w: 0.8965251}
+  m_LocalRotation: {x: 0.4383711, y: 0, z: 0, w: 0.89879405}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 337376011}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 52.59, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52, y: 0, z: 0}
 --- !u!1 &1885022278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,13 +2659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selector: {fileID: 1893035388}
-  abilities:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  buttons: []
 --- !u!1 &2007184575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2742,7 @@ Transform:
   m_GameObject: {fileID: 2007184575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

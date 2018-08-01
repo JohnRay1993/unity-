@@ -17,23 +17,43 @@ public class Tower : MonoBehaviour
     private float cooldown;
 	private int NumEnemies = 0;
 
+	private LineRenderer[] newFireLine = new LineRenderer[1000];
+
     private void Update()
     {
 		//NumEnemies = 0;
 		//if (target[0] == null)
-            FindTarget();
-        //else
-            HitTarget();
 
-		for (int i = 0; i < NumEnemies; i++) {
-			if (target[i] != null){
-				Vector3 h1 = target [i].transform.position - transform.position;
+		NumEnemies = 0;
+			
+
+
+        FindTarget();
+
+
+		if (isRange)
+			for (int i = NumEnemies; i < 1000; i++)
+				if (newFireLine [i] != null)
+					Destroy(newFireLine [i]);
+				
+        HitTarget();
+
+
+		//LineRenderer[] newFireLine = new LineRenderer[NumEnemies];
+		for (int i = 0; i <= NumEnemies; i++) {
+			if (target [i] != null) {
+				Vector3 h1 = target [i].transform.position;// - transform.position;
 				h1.y = 1.2f;
 
-			//fireLine.SetPosition (1, h1);
+				if (newFireLine [i] == null){
+					newFireLine [i] = Instantiate (fireLine);
+				}
+				newFireLine [i].SetPosition (0, new Vector3(transform.position.x, 1.2f, transform.position.z));
+				newFireLine [i].SetPosition (1, h1);
+				//if (i == 0) Debug.Log (target [i].transform.position + " " + newFireLine [i].GetPosition (0) + " " + newFireLine [i].GetPosition (1));
 			}
 		}
-		Debug.Log (NumEnemies);
+
     }
 
     private void FindTarget()
@@ -84,14 +104,15 @@ public class Tower : MonoBehaviour
 
     private void HitTarget()
     {
-		for (int i = 0; i <= NumEnemies; i++)
-		{
-			if (target[i] != null) {
-				if (cooldown <= 0.0f) {
+
+		if (cooldown <= 0.0f) {
+			for (int i = 0; i <= NumEnemies; i++) {
+				if (target [i] != null) {
 					target [i].TakeDamage (damage);
-					cooldown = attackSpeed;
 				}
 			}
+
+			cooldown = attackSpeed;
 		}
 
         cooldown -= Time.deltaTime;
